@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>425</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>425</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>425</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Téléchargements/loading.gif</normaloff>../../Téléchargements/loading.gif</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="homeWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>431</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>425</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTrouve_le_mot_v_1">
+    <property name="title">
+     <string>Par&amp;tie</string>
+    </property>
+    <addaction name="home"/>
+    <addaction name="pause"/>
+    <addaction name="actionNouvelle_partie"/>
+    <addaction name="actionScores"/>
+   </widget>
+   <widget class="QMenu" name="aboutf">
+    <property name="title">
+     <string>H&amp;elp</string>
+    </property>
+    <addaction name="about"/>
+    <addaction name="actionComment_jouer"/>
+   </widget>
+   <addaction name="menuTrouve_le_mot_v_1"/>
+   <addaction name="aboutf"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNouvelle_partie">
+   <property name="text">
+    <string>&amp;Nouvelle partie</string>
+   </property>
+  </action>
+  <action name="actionScores">
+   <property name="text">
+    <string>Score&amp;s</string>
+   </property>
+  </action>
+  <action name="actionMeilleur_score">
+   <property name="text">
+    <string>Meilleur score</string>
+   </property>
+  </action>
+  <action name="pause">
+   <property name="text">
+    <string>Pa&amp;use</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>A &amp;propos</string>
+   </property>
+  </action>
+  <action name="home">
+   <property name="text">
+    <string>&amp;Accueil</string>
+   </property>
+   <property name="shortcut">
+    <string comment="Ctrl+H" extracomment="Ctrl+H"/>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionComment_jouer">
+   <property name="text">
+    <string>&amp;Comment jouer</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

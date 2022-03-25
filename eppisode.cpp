@@ -45,7 +45,7 @@ Eppisode::Eppisode(QWidget *parent) :
 
 void Eppisode::init_buts(Ui::Eppisode* ui){
     mot = QString::fromStdString(motList[QRandomGenerator::global()->generate() % 297]);
-    ui->passer->setText(mot);
+    qDebug()<<mot;
     tail=mot.length();
     entered=0;
     time_count=0;

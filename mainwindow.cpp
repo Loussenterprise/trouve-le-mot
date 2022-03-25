@@ -35,7 +35,17 @@ void MainWindow::showAboutWidget(){
 }
 
 void MainWindow::showHelpWidget(){
-    setCentralWidget(new QPushButton("help"));
+    QLabel* help = new QLabel() ;
+    help->setText("\n   Bienvenue dans le jeu Trouve le mot.\n"
+                  "   Trouve le mot est un jeu dans lequel le joueur doit trouver \n"
+                  "   le mot à n lettres à partir d’une combinaison de 10 lettres qui\n"
+                  "   lui seront présentés afin d'avoir les points\n"
+                  "   Pour un temps inférieur à 10s le score est de 10pts\n"
+                  "   Pour un temps inférieur à 20s le score est de 5pts\n"
+                  "   Et pour un temps contraire aux précédents le score est de 2 pts\n"
+                  "   Une partie est faite d'une série de 10 et \n"
+                  "   le score est enregistré avec le nom du joueur");
+    setCentralWidget(help);
 }
 
 void MainWindow::showScoresWidget(){

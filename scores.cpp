@@ -43,7 +43,7 @@ int ResultModel::rowCount(const QModelIndex &parent) const
 int ResultModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return 2;
+    return 3;
 }
 
 QVariant ResultModel::data(const QModelIndex &index, int role) const
@@ -52,8 +52,10 @@ QVariant ResultModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     if (index.column() == 0) {
-        return names[index.row()];
+        return index.row() + 1;
     } else if (index.column() == 1) {
+        return names[index.row()];
+    } else if (index.column() == 2) {
         return scores[index.row()];
     }
     return QVariant();
@@ -63,8 +65,10 @@ QVariant ResultModel::headerData(int section, Qt::Orientation orientation, int r
 {
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
         if (section == 0) {
-            return QString("Name");
+            return QString("Rang");
         } else if (section == 1) {
+            return QString("Nom");
+        }else if (section == 2) {
             return QString("Score");
         }
     }

@@ -1,12 +1,7 @@
 #ifndef EPPISODE_H
 #define EPPISODE_H
 
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
-
+#include <chrono>
 #include <thread>
 #include <QWidget>
 #include <dbmanager.h>

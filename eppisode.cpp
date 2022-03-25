@@ -4,6 +4,8 @@
 #include <QInputDialog>
 #include <QDebug>
 
+
+
 Eppisode::Eppisode(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Eppisode)
@@ -31,7 +33,7 @@ Eppisode::Eppisode(QWidget *parent) :
     t = new std::thread([](Eppisode* param){
         while (!param->fin) {
             if (param->playing) {
-                sleep(1);
+                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
                 param->time_count++;
                 param->ui->time_count->setText(QString().setNum(param->time_count));
             }
@@ -117,7 +119,7 @@ Eppisode::~Eppisode()
     playing=false;
     fin=true;
     qDebug() << "is thread t joinable" <<t->joinable();
-    sleep(1);
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
     qDebug() << "is thread t always joinable" <<t->joinable();
     delete ui;
 }
